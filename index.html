@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voucher Scanner - Pakarmaru</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="paragon-logo.png" class="paragon-logo" alt="Paragon">
+      <p class="subtitle">Voucher Redemption System</p>
+    </div>
+    
+    <!-- Tombol Mode Spesifik -->
+    <div class="mode-switch">
+      <button id="btnPakarmaru" class="active" onclick="setMode('pakarmaru')">Mode Pakarmaru</button>
+      <button id="btnUmum" onclick="setMode('umum')">Mode Umum</button>
+    </div>
+
+    <div class="scanner-card">
+      <div id="reader"></div>
+    </div>
+    
+    <div id="result"></div>
+    
+    <hr style="margin:30px 0;">
+    
+    <div class="search-section" id="searchSection">
+      <h2>Cari Manual</h2>
+      <input type="text" id="searchVoucher" placeholder="Nama / Email / Kode Voucher">
+      <button class="btn-search" onclick="cariVoucher()">Cari Voucher</button>
+      <div id="hasilVoucher"></div>
+    </div>
+
+    <div class="brand-footer">
+      <img src="all-brand.png" alt="All Brands">
+    </div>
+  </div>
+
+  <div class="app-credit">
+    Powered by <strong>APS Paragon DC Aceh</strong>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
